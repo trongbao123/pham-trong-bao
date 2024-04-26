@@ -14,7 +14,7 @@ export default function ListCurrencies(props: props) {
     } = props || {};
 
     return (
-        <>
+        <Container>
             <CustomPricing>
                 Pricing Tables
             </CustomPricing>
@@ -31,7 +31,6 @@ export default function ListCurrencies(props: props) {
                 <CustomLineContent />
             </CustomLine>
             <FormCurrencie>
-                <CustomTitle>Currency Price List</CustomTitle>
                 <SelectCurrencies>
                     <Currencieslabel>
                         <InputCurrencies>
@@ -53,10 +52,18 @@ export default function ListCurrencies(props: props) {
                     </CurrencieslabelSelect>
                 </SelectCurrencies>
             </FormCurrencie >
-        </>
+        </Container>
     )
 };
 
+const Container = styled('div')((props) => {
+    return {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+})
 const CustomIconTable = styled('div')((props) => {
     return {
         display: 'flex',
@@ -124,12 +131,11 @@ const FormCurrencie = styled('form')((props) => {
     return {
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
         gap: 20,
-        width: 1240,
-        border: '1px solid grey',
-        borderRadius: 5,
+        width: "75%",
         padding: 10,
-        marginLeft: 60,
         marginTop: 40,
         marginBottom: 40
     }
