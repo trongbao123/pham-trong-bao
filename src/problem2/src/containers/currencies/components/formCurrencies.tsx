@@ -124,7 +124,8 @@ const InputCurrencies = styled('input')((props) => {
         height: 26,
         borderRadius: 5,
         cursor: 'pointer',
-        marginLeft: 20
+        marginLeft: 20,
+        textAlign: 'end',
     }
 });
 const Currencieslabel = styled('label')((props) => {
