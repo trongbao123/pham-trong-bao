@@ -4,7 +4,7 @@ import { DOMAIN, TOKEN } from "../configs/setting";
 import RequestType from "../types";
 
 const axiosInstance = axios.create({
-    baseURL: DOMAIN
+    baseURL: process.env.API_URL || DOMAIN,
 });
 
 const addTokenToRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
